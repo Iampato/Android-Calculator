@@ -95,7 +95,8 @@ class MainActivity : AppCompatActivity() {
                 textView3.text = results.toString()
 
         } catch (e: Exception) {
-            Toast.makeText(applicationContext,"Exception occurred",Toast.LENGTH_SHORT)
+            Toast.makeText(applicationContext,"Exception occurred",Toast.LENGTH_SHORT).show()
+            print("hey")
             Log.d("Exception", "message: " + e.message)
         }
     }
