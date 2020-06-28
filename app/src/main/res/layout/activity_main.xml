@@ -4,15 +4,186 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="end"
+        android:paddingRight="15sp"
+        android:paddingBottom="30sp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15sp"
+        android:paddingBottom="30sp"
+        android:text=""
+        android:textSize="30sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        app:columnCount="4"
+        app:layout_constraintBottom_toTopOf="@+id/button17"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="7"
+            android:onClick="button7Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="8"
+            android:onClick="button8Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="9"
+            android:onClick="button9Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="/"
+            android:onClick="buttonDivideClicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="4"
+            android:onClick="button4Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="5"
+            android:onClick="button5Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="6"
+            android:onClick="button6Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="*"
+            android:onClick="buttonMultiplyClicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="1"
+            android:onClick="button1Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="2"
+            android:onClick="button2Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="3"
+            android:onClick="button3Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="-"
+            android:onClick="buttonSubtractClicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="."
+            android:onClick="buttonDotClicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="0"
+            android:onClick="button0Clicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="C"
+            android:onClick="buttonCancelClicked"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:text="+"
+            android:onClick="buttonAddClicked"
+            android:textSize="25sp" />
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:text="="
+        android:onClick="buttonEqualsClicked"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
